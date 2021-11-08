@@ -16,7 +16,7 @@ export default class RestaurantsDAO{
     }
 
     static async getRestaurants({
-        filter = 0,
+        filters = 0,
         page = 0,
         restaurantsPerPage = 20,
     } = {}) {
