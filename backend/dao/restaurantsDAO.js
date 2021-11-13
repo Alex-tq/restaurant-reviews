@@ -95,7 +95,7 @@ export default class RestaurantsDAO {
           ]
       return await restaurants.aggregate(pipeline).next()
     } catch (e) {
-      console.error(`Something went wrong in getRestaurantByID: ${e}`)
+      console.error(`Something went wrong in getRestaurantByID in RestaurantDAO.js: ${e}`)
       throw e
     }
   }
