@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let http = axios.create({
-    baseURL: "http://localhost:5000/api/v1/restaurants",
+    baseURL: "https://us-east-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/restaurant-reviews-kdlea/service/restaurants/incoming_webhook/",
     headers: {
         "Content-type": "application/json"
     }
@@ -9,15 +9,15 @@ let http = axios.create({
 
 class RestaurantDataService {
   getAll(page = 0) {
-    return http.get(`?page=${page}`);
+    return http.get(`restaurants?page=${page}`);
   }
 
   get(id) {
-    return http.get(`/id/${id}`);
+    return http.get(`/restaurants?id=${id}`);
   }
 
   find(query, by = "name", page = 0) {
-    return http.get(`?${by}=${query}&page=${page}`);
+    return http.get(`restaurants?${by}=${query}&page=${page}`);
   } 
 
   createReview(data) {
