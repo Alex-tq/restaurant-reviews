@@ -21,9 +21,9 @@ function App() {
   return (
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a href="/restaurants" className="navbar-brand">
-          Restaurant Reviews
-        </a>
+          <Link to="/restaurants" className="navbar-brand">
+            Restaurant Reviews
+          </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to={"/restaurants"} className="nav-link">
